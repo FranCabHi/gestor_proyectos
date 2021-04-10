@@ -1,0 +1,30 @@
+<h1>Creación de proyectos</h1>
+
+<form method ='get' action='/projects/create'>
+    <div class="form-group">
+        <label for="name">Nombre</label>
+        <input name="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nombre del proyecto">
+    </div>
+    <div class="form-group">
+        <label for="description">Descripción</label>
+        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" placeholder="Ingrese la descripción del proyecto" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="start_date">Fecha de comienzo</label>
+        <input name="start_date" type="date" class="form-control" class="form-control" id="formGroupExampleInput" placeholder="Fecha de comienzo">
+    </div>
+    <div class="form-group">
+        <label for="completion_date">Fecha de término</label>
+        <input name="completion_date" type="date" class="form-control" class="form-control" id="formGroupExampleInput" placeholder="Fecha de término">
+    </div>    
+    <div class="form-group">
+        <label for="state">Estado</label>
+        <select name="state" class="form-select" aria-label="Default select example">
+            <option selected>Propuesta</option>
+            <option value="En progreso">En progreso</option>
+            <option value="Terminado">Terminado</option>    
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

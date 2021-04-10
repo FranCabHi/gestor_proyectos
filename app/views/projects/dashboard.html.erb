@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light bg-light justify-content-end">
+    <form>
+        <div class="input-group mb-4">
+            <select name="state" class="form-select" id="inputGroupSelect04" aria-label="Filtro por estado">
+                <option selected>Filtro por estado</option>
+                <option value="Propuesta">Propuesta</option>
+                <option value="En progreso">En progreso</option>
+                <option value="Terminado">Terminado</option>
+            </select>
+            <button class="btn btn-outline-info" type="submit">Filtrar</button>
+        </div>
+    </form>
+</nav>
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Fecha de comienzo</th>
+        <th>Fecha de término</th>
+        <th>Estado</th>
+    </tr>
+    <% @projects.each do |project| %>
+        <tr>
+            <td><%= project.name %></td>
+            <td><%= project.description %></td>
+            <td><%= project.start_date %></td>
+            <td><%= project.completion_date %></td>
+            <td><%= project.state %></td>
+        </tr>
+    <% end %>
+</table>

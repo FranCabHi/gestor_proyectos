@@ -1,0 +1,13 @@
+<% if @project.errors.any? %>
+    <div id="error_explanation">
+    <h3>El formulario contiene <%= pluralize(@project.errors.count, "error") %> y no se pudo guardar el proyecto:</h3>
+        <ul>
+            <% @project.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% else %>
+    <h1>Proyecto creado correctamente</h1>
+    <p>Revíselo en el <a href="<%= projects_dashboard_path %>">dashboard</a></p>
+<% end %>
